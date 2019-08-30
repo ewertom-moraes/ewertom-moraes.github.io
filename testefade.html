@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <img src="http://www.clipartsegifs.com.br/cliparts/variados/garfield/garfield_02.jpg" id="img-fade" />
+        <button id="btn-fade">FadeOut</button>
+        
+        <style>
+        #img-fade { transition: 2s; }
+        .fade-out { opacity: 0; }
+        .fade-in { opacity: 1; }
+        </style>
+        
+        <script>
+        var id = function(el) {
+            return document.getElementById( el );
+        }
+        var $btn = id('btn-fade'),
+            $img = id('img-fade');
+        
+        $btn.onclick = function(){
+            var $this = this;
+        
+        
+            if( $img.className ==='fade-out' ){
+                $img.className = 'fade-in';
+                $this.innerHTML = 'FadeOut';
+            } else {
+                $img.className = 'fade-out';
+                $this.innerHTML = 'FadeIn';
+            }
+        }
+        </script>
+</body>
+</html>

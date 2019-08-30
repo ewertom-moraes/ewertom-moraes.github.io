@@ -50,4 +50,63 @@ h4{
 .text-icon{
     /* word-wrap:break-word; */
     color: black !important; 
+    text-align: center !important;
+    padding-left: 0px !important;
+}
+
+.opacity-0{
+    opacity: 0;
+    transition: 2s;
+}
+
+.opacity-1{
+    opacity: 1;
+    transition: 1s;
+}
+
+.fade-out{
+    transition: 2s;
+}
+
+/** efeito de livro**/
+/*https://codepen.io/erinesullivan/pen/gxdbzp*/
+@import url(https://fonts.googleapis.com/css?family=Crimson+Text:400,700,900,400italic,700italic,900italic|Playfair+Display:400,700,900,400italic,700italic,900italic|Rock+Salt:400);
+body {
+    /* background-color: #1d1f20; */
+    /* color: #e5e5e5; */
+    font: 16px/1.25 'Crimson Text', sans-serif !important;
+    margin: 0 !important;
+}
+
+/* 
+@-webkit-keyframes fadeinout {
+    0%,100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+  
+@keyframes fadeinout {
+    0%,100% { opacity: 0; }
+    50% { opacity: 1; }
+} */
+
+.bg-book {
+    background-image: url(assets/img/book-bg-1.jpg);
+    height: auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #464646;
+}
+
+.bg-loading-book {
+    background-image: url(assets/img/book_imersion.gif);
+    height: auto;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-color: #464646;
+    /* -webkit-animation: fadeinout 4s linear forwards;
+    animation: fadeinout 4s linear forwards; */
 }
