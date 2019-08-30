@@ -1,11 +1,15 @@
+.wizard-card .choice{
+    height: 100px;
+}
+
 .wizard-card .choice i{
-    font-size: 36px;
-    line-height: 50px;
+    font-size: 18px;
+    line-height: 29px;
 }
 
 .wizard-card .choice .icon{
-    height: 56px;
-    width: 56px;
+    height: 36px;
+    width: 36px;
 }
 
 .wizard-card  .choice.checkbox .icon{
@@ -41,4 +45,9 @@
 
 h4{
     margin-top: 40px !important;
+}
+
+.text-icon{
+    /* word-wrap:break-word; */
+    color: black !important; 
 }

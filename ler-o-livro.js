@@ -1,6 +1,6 @@
 var musicas = ["Axé"
   , "Blues"
-  , "Brega / Bregas Marcantes"
+  , "Brega , Bregas Marcantes"
   , "Country"
   , "Eletrônica"
   , "Forró"
@@ -8,8 +8,8 @@ var musicas = ["Axé"
   , "Gospel"
   , "Hip Hop"
   , "Jazz"
-  , "Melody / Tecnomelody"
-  , "Metal / Heavy Metal"
+  , "Melody , Tecnomelody"
+  , "Metal , Heavy Metal"
   , "MPB"
   , "Música clássica"
   , "Pagode"
@@ -58,7 +58,7 @@ var literarios = [
     ,"Computadores e Tecnologia"
     ,"Criação de Filhos & Relacionamentos"
     ,"Educação e Ensino"
-    ,"Educação Financeira / Finanças"
+    ,"Educação Financeira , Finanças"
     ,"Empreendedorismo"
     ,"Engenharia e Transportes"
     ,"Esportes e Ar Livre"
@@ -99,13 +99,12 @@ function defineSessao(tipo, nome, checks, icone) {
     var sessao = $('#'+nome);
   
       var row = $(`<div class="row" >
-        <div class="col-sm-10 col-sm-offset-1">
-        </div>
+       
         </div>
       `);
       sessao.append(row);
       checks.forEach((check, index) => {
-        var col = $(`<div class="col-md-4" />`);
+        var col = $(`<div class="col-lg-3 col-md-3 col-sm-4 col-xs-6 " />`);
 
         var radioButtonPrimeiro =  tipo == "radio" && index == 0;
         var checkedPadrao =  radioButtonPrimeiro ? 'checked' : '' ;
@@ -117,19 +116,20 @@ function defineSessao(tipo, nome, checks, icone) {
                     <div class="icon">
                         <i class="${icone}"></i>
                     </div>
-                    <h6>${check}</h6>
+                        <label class="text-icon">${check}</label> 
                 </div>
            `;
+        //html = `<div style="width: 100px; height: 100px; border: solid 1px;">Celula${index}</div>`;
         col.html(html);
-        if(index > 0 && ((index) % 3 == 0)){
-          row = $(`<div class="row" >
-          <div class="col-sm-10 col-sm-offset-1">
-          </div>
-          </div>
-        `);
-          sessao.append(row);
-        }
-        row.find('.col-sm-10').append(col);
+        // if(index > 0 && ((index) % 3 == 0)){
+        //     row = $(`<div class="row" >
+        //     <div class="col-sm-10 col-sm-offset-1">
+        //     </div>
+        //     </div>
+        //   `);
+        //     sessao.append(row);
+        // }
+        row.append(col);
       });
 }
 
